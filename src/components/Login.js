@@ -3,24 +3,9 @@ import React, { useState } from 'react'
 let Login = () => {
 
     let API = [
-        {
-            id: 1,
-            name: "ABC",
-            email: "abc@gmail.com",
-            password: "12"
-        },
-        {
-            id: 2,
-            name: "DEF",
-            email: "def@gmail.com",
-            password: "1234"
-        },
-        {
-            id: 3,
-            name: "GHI",
-            email: "ghi@gmail.com",
-            password: "123456"
-        }
+        { id: 1, name: "ABC", email: "abc@gmail.com", password: "12" },
+        { id: 2, name: "DEF", email: "def@gmail.com", password: "1234" },
+        { id: 3, name: "GHI", email: "ghi@gmail.com", password: "123456" }
     ]
 
     let [email, setEmail] = useState('')
@@ -33,18 +18,17 @@ let Login = () => {
         for (let t of API) {
             if (x.includes('@')) {
                 if (x == t.email) {
-                    ('set', x, 'API', t.email)
                     return true
                 }
             } else {
                 if (x == t.password) {
-                    console.log('set', x, 'API', t.password)
                     return true
                 }
             }
         }
         return false
     }
+
     function handleSubmit(e) {
         e.preventDefault()
         setTimeout(() => {  
@@ -62,6 +46,7 @@ let Login = () => {
     return (
         <div className='Login'>
             <form onSubmit={handleSubmit}>
+                <h1>Sign<span style={{color:'red'}}>Up</span></h1>
                 <input id="input-email" onChange={(e) => {
                     setEmail(e.target.value)
                     setFlag(false)
@@ -76,11 +61,11 @@ let Login = () => {
                     setSFlag(false)
                 }} type='password' placeholder='Password' />
 
-                {flag && <p id='password-error' style={{ color: 'red', marginLeft: '5px' }}>Password Incorrect</p>}
+                {flag && <p id='password-error' style={{ color: 'red', marginLeft: '16px', marginBottom:'15px' }}>Password Incorrect</p>}
 
-                {sflag && <p id='user-error' style={{ color: 'red', marginLeft: '5px' }}>User not found</p>}
+                {sflag && <p id='user-error' style={{ color: 'red', marginLeft: '16px', marginBottom:'15px' }}>User not found</p>}
 
-                {correct && <p id='user-error' style={{ color: 'green', marginLeft: '5px' }}>Login Successfull</p>}
+                {correct && <p id='user-error' style={{ color: 'green', marginLeft: '16px', marginBottom:'15px' }}>Login Successfull</p>}
 
                 <button id="submit-form-btn">Submit</button>
             </form>

@@ -1,6 +1,7 @@
 import React from 'react'
 import Login from './Login'
 import '../styles/App.css'
+import GPTwalacode from './GPTwalacode'
 
 let App = () => {
 

@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -7,32 +7,52 @@
 h1 {
     color: #27aedb;
     text-align: center;
-    }
-    
+}
 
-button{
-    color: #27aedb;
+
+button {
+    /* color: #27aedb; */
     text-align: center;
     justify-content: center;
     align-items: center;
 }
 
-.Login{
+.Login {
     width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
 }
 
-form{
-    /* width: 500px; */
-    border: 2px solid green;
-    padding: 10px;
-    input{
+form {
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 5px;
+    border-radius: 10px;
+
+    input {
         display: block;
-        margin: 5px;
-        font-size: 20px;
+        margin: 15px;
+        font-size: 30px;
+        padding: 5px;
+        box-shadow: 0 0 1px;
+        border: none;
+        border-radius: 10px;
     }
-    button{
-        margin: 5px;
+
+    button {
+        margin-left: 15px;
+        margin-bottom: 15px;
+        font-size: 30px;
+        box-shadow: 0 0 1px;
+        border: none;
+        border-radius: 10px;
+        padding: 0px 10px;
+        color: blue;
+    }
+
+    h1 {
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 40px;
     }
 }
